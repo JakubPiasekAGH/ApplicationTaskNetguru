@@ -53,4 +53,24 @@ public class PropertiesReader
     {
         return getPropertyAsInteger("wait.timeout");
     }
+
+    public String getPostingUserName()
+    {
+        return getProperty("posting.user.name");
+    }
+
+    public String getPostingUserPassword()
+    {
+        return getProperty("posting.user.password");
+    }
+
+    public String getFollowingUserName()
+    {
+        return getProperty("following.user.name");
+    }
+
+    public String getFollowingUserPassword()
+    {
+        return getProperty("following.user.password");
+    }
 }

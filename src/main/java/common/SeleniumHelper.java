@@ -28,4 +28,9 @@ public class SeleniumHelper
     {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
+
+    public void insertTextIntoTextBox(WebElement element, String text)
+    {
+        wait.until(ExpectedConditions.visibilityOf(element)).sendKeys(text);
+    }
 }

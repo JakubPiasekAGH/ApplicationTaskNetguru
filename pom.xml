@@ -3,23 +3,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <configuration>
-        <include resource="org/springframework/boot/logging/logback/base.xml" />
-        <logger name="org.springframework" level="ERROR"/>
-    </configuration>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
     <artifactId>ApplicationTaskNetguru</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
+        <testSourceDirectory>src/test/java/</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
-                    <source>10</source>
-                    <target>10</target>
+                    <source>${java.release.version}</source>
+                    <target>${java.release.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <trimStackTrace>false</trimStackTrace>
                 </configuration>
             </plugin>
         </plugins>
@@ -36,6 +42,8 @@
         <project.lombok.version>1.18.12</project.lombok.version>
         <commons.io.version>2.6</commons.io.version>
         <io.github.bonigarcia.version>4.3.1</io.github.bonigarcia.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -102,5 +110,4 @@
             <version>${io.github.bonigarcia.version}</version>
         </dependency>
     </dependencies>
-
 </project>
