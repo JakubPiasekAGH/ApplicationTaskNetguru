@@ -24,8 +24,10 @@ class TwitterPostingTest:
 void publicTweetWithPicture():
 2. Add new tweet:
 	- add text (At the end of tweet I've added a timestamp to make sure that we are verifying newly added tweet not something that may be left from previous test runs)
-	- insert image,
+	- insert imageto scrach of tweet,
+	- check number of tweets (to make sure that newly added twitt appear),
 	- click 'tweet' button (public your tweet)
+	- wait for newly tweet to appear (number of tweets must increment)
 3. Verify:
 	- verify if new tweet appeared on you board,
 	- verify if new tweet text equals text you entered,
@@ -33,4 +35,9 @@ void publicTweetWithPicture():
 	(all verification is closed in assertAll() block so it means that even if one of this conditions fails, all of them will be verified anyway).
 
 void deleteTweetWithPicture()
-4.
+4. Get number of tweets available on you board
+5. Remove tweet (options, delete, confirm delete),
+6. Wait for number of tweets to decrement
+7. Verify:
+	- verify if number of tweets after removing tweet is decremented by 1,
+	- verify if text from first available tweet on board does not equal the text of tweet that you added
