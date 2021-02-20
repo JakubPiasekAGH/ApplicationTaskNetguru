@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-public class TwitterFollowingTest extends TwitterTestBase
+class TwitterFollowingTest extends TwitterTestBase
 {
     @BeforeAll
     void logInToTweeterAsPostingUser()

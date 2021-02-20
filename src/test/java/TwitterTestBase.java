@@ -1,4 +1,5 @@
 import common.TestBase;
+import helpers.TwitterHomePageHelper;
 import helpers.TwitterLoginPageHelper;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -9,10 +10,12 @@ import javax.annotation.PostConstruct;
 public class TwitterTestBase extends TestBase
 {
     protected TwitterLoginPageHelper twitterLoginPageHelper;
+    protected TwitterHomePageHelper twitterHomePageHelper;
 
     @PostConstruct
-    void init()
+    void initTwitterTestBase()
     {
         twitterLoginPageHelper = new TwitterLoginPageHelper(driver);
+        twitterHomePageHelper = new TwitterHomePageHelper(driver);
     }
 }
