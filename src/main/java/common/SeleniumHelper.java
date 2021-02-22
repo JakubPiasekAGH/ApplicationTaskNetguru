@@ -3,21 +3,18 @@ package common;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumHelper
 {
     private final WebDriverWait wait;
-    private final Actions actions;
     private final WebDriver driver;
 
     public SeleniumHelper(WebDriver driver)
     {
         this.wait = new WebDriverWait(driver, 15);
         this.driver = driver;
-        this.actions = new Actions(this.driver);
     }
 
     public void navigateToUrl(String url)
@@ -28,6 +25,11 @@ public class SeleniumHelper
     public void waitForElementToBeClickableAndClick(WebElement element)
     {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+
+    public void performClickOnElement(WebElement element)
+    {
+        element.click();
     }
 
     public void insertTextIntoTextBox(WebElement element, String text)
@@ -65,5 +67,10 @@ public class SeleniumHelper
     public String getAttributeFromElement(WebElement element, String attribute)
     {
         return element.getAttribute(attribute);
+    }
+
+    public void refreshPage()
+    {
+        driver.get(driver.getCurrentUrl());
     }
 }

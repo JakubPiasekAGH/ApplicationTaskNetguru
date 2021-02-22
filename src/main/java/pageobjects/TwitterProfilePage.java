@@ -7,12 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 @Getter
-public class DeleteTweetDialog
+public class TwitterProfilePage
 {
-    @FindBy(xpath = "//div[@data-testid='confirmationSheetConfirm']")
-    private WebElement deleteTweetButton;
+    @FindBy(xpath = "//a[contains(@href,'following')]")
+    private WebElement followingLabel;
 
-    public DeleteTweetDialog(WebDriver driver)
+    public TwitterProfilePage(WebDriver driver)
     {
         PageFactory.initElements(driver, this);
     }

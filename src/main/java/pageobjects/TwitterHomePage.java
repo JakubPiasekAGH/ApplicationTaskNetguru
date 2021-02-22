@@ -30,7 +30,7 @@ public class TwitterHomePage
     private List<WebElement> tweetOptionButtonsList;
     @FindBy(xpath = "//div[@role='menuitem' and contains(.,'Delete')]")
     private WebElement deleteTweetButton;
-    private By tweetsListLocator = By.xpath("//article");
+    private final By tweetsListLocator = By.xpath("//article");
 
     public TwitterHomePage(WebDriver driver)
     {

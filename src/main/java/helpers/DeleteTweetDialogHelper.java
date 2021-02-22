@@ -2,21 +2,21 @@ package helpers;
 
 import common.SeleniumHelper;
 import org.openqa.selenium.WebDriver;
-import pageobjects.DeleteTweetDialog;
+import pageobjects.ConfirmationDialog;
 
 public class DeleteTweetDialogHelper
 {
-    private SeleniumHelper seleniumHelper;
-    private DeleteTweetDialog deleteTweetDialog;
+    private final SeleniumHelper seleniumHelper;
+    private final ConfirmationDialog confirmationDialog;
 
     public DeleteTweetDialogHelper(WebDriver driver)
     {
         seleniumHelper = new SeleniumHelper(driver);
-        deleteTweetDialog = new DeleteTweetDialog(driver);
+        confirmationDialog = new ConfirmationDialog(driver);
     }
 
     public void clickDeleteTweetButton()
     {
-        seleniumHelper.waitForElementToBeClickableAndClick(deleteTweetDialog.getDeleteTweetButton());
+        seleniumHelper.waitForElementToBeClickableAndClick(confirmationDialog.getConfirmActionButton());
     }
 }

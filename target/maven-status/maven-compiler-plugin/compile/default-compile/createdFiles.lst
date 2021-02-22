@@ -1,7 +1,7 @@
+common\PropertiesReader.class
 common\TestBase.class
 pageobjects\TwitterLoginPage.class
 common\SeleniumHelper.class
 common\TestConfig.class
-common\PropertiesReader.class
 helpers\TwitterLoginPageHelper.class
 exception\ReadPropertyException.class

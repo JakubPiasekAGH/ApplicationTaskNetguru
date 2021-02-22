@@ -14,8 +14,8 @@ import java.net.URL;
 
 public class TwitterHomePageHelper
 {
-    private SeleniumHelper seleniumHelper;
-    private TwitterHomePage twitterHomePage;
+    private final SeleniumHelper seleniumHelper;
+    private final TwitterHomePage twitterHomePage;
 
     public TwitterHomePageHelper(WebDriver driver)
     {
@@ -78,4 +78,6 @@ public class TwitterHomePageHelper
     {
         seleniumHelper.waitForElementToBeClickableAndClick(twitterHomePage.getDeleteTweetButton());
     }
+
+
 }
