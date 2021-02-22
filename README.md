@@ -1,6 +1,6 @@
 # ApplicationTaskNetguru
 
-Looking for 2 core functionalities in twitter I've started with quick research and according to wikipedia Twitter is: 
+When I was looking for 2 core functionalities in twitter I've started with quick research and according to wikipedia Twitter is: 
 "an (..) service on which users post and interact with messages known as "tweets". Registered users can post, like and retweet tweets".
 Another definition says:
 "Twitter allows users to discover stories regarding today's biggest news and events, follow people or companies that post content they enjoy consuming, or simply communicate with friends."
