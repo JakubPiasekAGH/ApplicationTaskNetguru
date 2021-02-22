@@ -5,6 +5,14 @@ import java.util.stream.IntStream;
 
 public class ImageComparisonHelper
 {
+    private ImageComparisonHelper()
+    {
+        //Utility classes, which are collections of static members, are not meant to be instantiated. Even abstract
+        //utility classes, which can be extended, should not have public constructors.
+        //Java adds an implicit public constructor to every class which does not define at least one explicitly.
+        //Hence, at least one non-public constructor should be defined.
+    }
+
     /**
      * Compares image pixel by pixel and returns comparison success rate in %
      *
