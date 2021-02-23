@@ -1,6 +1,6 @@
-# ApplicationTaskNetguru
+#JavaSeleniumExample
 
-When I was looking for 2 core functionalities in twitter I've started with quick research and according to wikipedia Twitter is: 
+Looking for 2 core functionalities in twitter I've started with quick research and according to wikipedia Twitter is: 
 "an (..) service on which users post and interact with messages known as "tweets". Registered users can post, like and retweet tweets".
 Another definition says:
 "Twitter allows users to discover stories regarding today's biggest news and events, follow people or companies that post content they enjoy consuming, or simply communicate with friends."
@@ -74,7 +74,6 @@ void verifyIfUnFollowedSiteDoNotAppearsInYourProfile()
 void verifyUnFollowWithSiteList()
 8. Go to followed site and verify if it's unfollowed
 
-How to run:
 Install java11 (e.g. open JDK) and maven (if you do not have it) - https://www.baeldung.com/install-maven-on-windows-linux-mac
 
 If installation is fine navigate to folder where you checkout project from repository (the one where there is pom.xml file)
@@ -91,36 +90,3 @@ If you want to edit settings and run the same tests in different configuration h
 
 so with properties you can type in e.g cmd:
 mvn -Dis.headless=true -Dwait.timeout=10 test
-
-Expected result from test run:
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.203 s - in TwitterPostingTest
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 53.594 s - in TwitterFollowingTest
-[INFO]
-[INFO] Results:
-[INFO]
-[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
-[INFO]
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:04 min
-[INFO] Finished at: 2021-02-22T14:32:12+01:00
-[INFO] ------------------------------------------------------------------------
-
-
------------------------------ when you run test in 'concurrent' mode result can differ and look like this (number of tests assigned to each class does not equal expected):
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.672 s - in TwitterPostingTest
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.439 s - in TwitterFollowingTest
-[INFO]
-[INFO] Results:
-[INFO]
-[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
-[INFO]
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  33.605 s
-[INFO] Finished at: 2021-02-22T14:35:25+01:00
-[INFO] ------------------------------------------------------------------------
-
-
