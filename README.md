@@ -1,4 +1,4 @@
-# ApplicationTaskNetguru
+#JavaSeleniumExample
 
 Looking for 2 core functionalities in twitter I've started with quick research and according to wikipedia Twitter is: 
 "an (..) service on which users post and interact with messages known as "tweets". Registered users can post, like and retweet tweets".
